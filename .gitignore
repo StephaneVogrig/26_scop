@@ -33,6 +33,7 @@ scop
 *.la
 *.a
 *.lib
+libs/
 
 # Executables
 *.exe
