@@ -1,3 +1,5 @@
+scop
+
 # Prerequisites
 *.d
 
@@ -5,7 +7,6 @@
 *.slo
 *.lo
 *.o
-*.obj
 
 # Precompiled Headers
 *.gch
@@ -39,17 +40,10 @@
 *.app
 
 # Build directories
+.build/
 build/
 Build/
 build-*/
-
-# CMake generated files
-CMakeFiles/
-CMakeCache.txt
-cmake_install.cmake
-Makefile
-install_manifest.txt
-compile_commands.json
 
 # Temporary files
 *.tmp
