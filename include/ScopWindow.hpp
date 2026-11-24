@@ -6,7 +6,7 @@
 /*   By: svogrig < svogrig@studebt.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 16:10:12 by svogrig           #+#    #+#             */
-/*   Updated: 2026/11/24 21:12:37 by svogrig          ###   ########.fr       */
+/*   Updated: 2026/11/25 00:10:11 by svogrig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class ScopWindow
         void pollEvents() const;
 
     private:
+        static void framebufferSizeCallback(GLFWwindow* window, int width, int height);
         GLFWwindow* _window = nullptr;
 };
 

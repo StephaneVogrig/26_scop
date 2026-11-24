@@ -6,7 +6,7 @@
 /*   By: svogrig < svogrig@studebt.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 16:23:18 by svogrig           #+#    #+#             */
-/*   Updated: 2026/11/24 21:14:05 by svogrig          ###   ########.fr       */
+/*   Updated: 2026/11/25 00:07:43 by svogrig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ ScopWindow::ScopWindow(GlfwContext&, int width, int height, const char* title)
         throw(std::runtime_error("Failed to open GLFW window!"));
     }
     glfwMakeContextCurrent(_window);
+    glfwSetFramebufferSizeCallback(_window, framebufferSizeCallback);
 }
 
 ScopWindow::~ScopWindow()
@@ -44,4 +45,10 @@ void ScopWindow::swapBuffers() const
 void ScopWindow::pollEvents() const
 {
     glfwPollEvents();
+}
+
+void ScopWindow::framebufferSizeCallback(GLFWwindow* window, int width, int height)
+{
+    (void)window;
+    glViewport(0, 0, width, height);
 }

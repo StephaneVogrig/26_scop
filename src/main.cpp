@@ -6,7 +6,7 @@
 /*   By: svogrig < svogrig@studebt.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 18:19:16 by svogrig           #+#    #+#             */
-/*   Updated: 2026/11/24 21:15:18 by svogrig          ###   ########.fr       */
+/*   Updated: 2026/11/25 00:09:12 by svogrig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ int main(void)
         ScopWindow window(glfw, 1024, 768, "scop");
         while (!window.shouldClose())
         {
+            glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+            glClear(GL_COLOR_BUFFER_BIT);
+
             window.swapBuffers();
             window.pollEvents();
         }
