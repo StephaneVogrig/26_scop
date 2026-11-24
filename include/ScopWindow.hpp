@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ScopWindow.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stephane <stephane@student.42.fr>          +#+  +:+       +#+        */
+/*   By: svogrig < svogrig@studebt.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 16:10:12 by svogrig           #+#    #+#             */
-/*   Updated: 2026/11/24 19:40:50 by stephane         ###   ########.fr       */
+/*   Updated: 2026/11/24 21:12:37 by svogrig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCOPWINDOW_HPP
 # define SCOPWINDOW_HPP
 
-#include <stdexcept>
 #include <GLFW/glfw3.h>
 #include "GlfwContext.hpp"
 
@@ -25,8 +24,9 @@ class ScopWindow
         ScopWindow& operator=(const ScopWindow& other) = delete;
         ~ScopWindow();
 
-        bool shouldClose();
-        void swapBuffers();
+        bool shouldClose() const;
+        void swapBuffers() const;
+        void pollEvents() const;
 
     private:
         GLFWwindow* _window = nullptr;
