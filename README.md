@@ -10,6 +10,10 @@ Utilisation de GLFW 3.4
 
 ## Ressources
 [OpenGL](https://www.opengl.org/)
-[OpenGL Tutorial](https://www.opengl-tutorial.org/fr/beginners-tutorials/)
 
 [glfw](https://www.glfw.org/)
+
+### OpenGL tutorials
+[Learn OpenGL](https://learnopengl.com/)<br>
+[Anton's tutorial](https://antongerdelan.net/opengl/)<br>
+[OpenGL Tutorial](https://www.opengl-tutorial.org/fr/beginners-tutorials/)<br>
