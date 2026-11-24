@@ -6,7 +6,7 @@
 #    By: svogrig < svogrig@studebt.42.fr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/11 17:48:44 by svogrig           #+#    #+#              #
-#    Updated: 2026/11/11 23:47:40 by svogrig          ###   ########.fr        #
+#    Updated: 2026/11/24 16:53:48 by svogrig          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,8 @@ NAME			:=	scop
 # sources ---------------------------------------------------------------------#
 
 DIR_SRC			:=	src
-SRC				:=	main.cpp
+SRC				:=	main.cpp \
+					ScopWindow.cpp
 
 SRC				:=	$(addprefix $(DIR_SRC)/, $(SRC))
 
