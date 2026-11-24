@@ -3,14 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svogrig < svogrig@studebt.42.fr>           +#+  +:+       +#+        */
+/*   By: stephane <stephane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 18:19:16 by svogrig           #+#    #+#             */
-/*   Updated: 2026/11/24 17:41:43 by svogrig          ###   ########.fr       */
+/*   Updated: 2026/11/24 19:38:10 by stephane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <cstdlib>
 #include <iostream>
+#include <GLFW/glfw3.h>
+#include "GlfwContext.hpp"
 #include "ScopWindow.hpp"
 
 #define FG_RED			"\033[31m"
@@ -19,15 +22,18 @@
 int main(void) {
     try {
         std::cout << "Scop start" << std::endl;
-        ScopWindow window(1024, 768, "scop");
-        while (!glfwWindowShouldClose(window.get()))
+
+		GlfwContext glfw;
+        ScopWindow window(glfw, 1024, 768, "scop");
+        while (!window.shouldClose())
         {
-            glfwSwapBuffers(window.get());
+			window.swapBuffers();
+			glfwPollEvents();
         }
-        return (EXIT_SUCCESS);
+        return EXIT_SUCCESS;
     }
     catch (const std::runtime_error& e) {
         std::cerr << FG_RED << e.what() << FG_DEFAULT << std::endl;
-        return (EXIT_FAILURE);
+        return EXIT_FAILURE;
     }
 }

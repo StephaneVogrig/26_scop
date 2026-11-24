@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: svogrig < svogrig@studebt.42.fr>           +#+  +:+       +#+         #
+#    By: stephane <stephane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/11 17:48:44 by svogrig           #+#    #+#              #
-#    Updated: 2026/11/24 16:53:48 by svogrig          ###   ########.fr        #
+#    Updated: 2026/11/24 19:10:50 by stephane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ NAME			:=	scop
 
 DIR_SRC			:=	src
 SRC				:=	main.cpp \
-					ScopWindow.cpp
+					ScopWindow.cpp \
+					GlfwContext.cpp
 
 SRC				:=	$(addprefix $(DIR_SRC)/, $(SRC))
 
