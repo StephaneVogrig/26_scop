@@ -15,7 +15,7 @@
 
 # include <array>
 # include <cstdint>
-# include <GLFW/glfw3.h>
+# include "loaderGL.hpp"
 
 class Input
 {

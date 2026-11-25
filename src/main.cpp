@@ -6,7 +6,7 @@
 /*   By: svogrig < svogrig@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/11 18:19:16 by svogrig           #+#    #+#             */
-/*   Updated: 2026/11/25 14:43:40 by svogrig          ###   ########.fr       */
+/*   Updated: 2026/11/25 20:49:16 by svogrig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <iostream>
 #include "GlfwContext.hpp"
 #include "Window.hpp"
+#include "loaderGL.hpp"
 
 #define FG_RED      "\033[31m"
 #define FG_DEFAULT  "\033[39m"
@@ -35,6 +36,8 @@ int main(void)
         GlfwContext glfw;
         Input input;
         Window window(glfw, input, 1024, 768, "scop");
+        loadGLextensions();
+
         while (!window.shouldClose())
         {
             processInput(window, input);
