@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: stephane <stephane@student.42.fr>          +#+  +:+       +#+         #
+#    By: svogrig < svogrig@student.42.fr>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/11 17:48:44 by svogrig           #+#    #+#              #
-#    Updated: 2026/11/24 19:10:50 by stephane         ###   ########.fr        #
+#    Updated: 2026/11/25 14:36:13 by svogrig          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,11 +21,7 @@ NAME			:=	scop
 # sources ---------------------------------------------------------------------#
 
 DIR_SRC			:=	src
-SRC				:=	main.cpp \
-					ScopWindow.cpp \
-					GlfwContext.cpp
-
-SRC				:=	$(addprefix $(DIR_SRC)/, $(SRC))
+SRC				:=  $(wildcard $(DIR_SRC)/*.cpp)
 
 DIR_BUILD 		:=	.build
 DIR_TMP			:=	$(DIR_BUILD)/tmp
