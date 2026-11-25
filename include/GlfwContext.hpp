@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   GlfwContext.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svogrig < svogrig@studebt.42.fr>           +#+  +:+       +#+        */
+/*   By: svogrig < svogrig@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 19:01:42 by stephane          #+#    #+#             */
-/*   Updated: 2026/11/24 20:59:04 by svogrig          ###   ########.fr       */
+/*   Updated: 2026/11/25 14:30:21 by svogrig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ class GlfwContext
         ~GlfwContext();
         GlfwContext(const GlfwContext&) = delete;
         GlfwContext& operator=(const GlfwContext&) = delete;
+        GlfwContext(GlfwContext&&) = delete;
+        GlfwContext& operator=(GlfwContext&&) = delete;
 };
 
 #endif

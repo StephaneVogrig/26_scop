@@ -1,36 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScopWindow.hpp                                     :+:      :+:    :+:   */
+/*   Window.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: svogrig < svogrig@studebt.42.fr>           +#+  +:+       +#+        */
+/*   By: svogrig < svogrig@student.42.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/24 16:10:12 by svogrig           #+#    #+#             */
-/*   Updated: 2026/11/25 00:10:11 by svogrig          ###   ########.fr       */
+/*   Updated: 2026/11/25 14:03:09 by svogrig          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCOPWINDOW_HPP
-# define SCOPWINDOW_HPP
+#ifndef Window_HPP
+# define Window_HPP
 
 #include <GLFW/glfw3.h>
 #include "GlfwContext.hpp"
+#include "Input.hpp"
 
-class ScopWindow
+class Window
 {
     public:
-        ScopWindow(GlfwContext&, int width, int height, const char* title);
-        ScopWindow(const ScopWindow& other) = delete;
-        ScopWindow& operator=(const ScopWindow& other) = delete;
-        ~ScopWindow();
+        Window(GlfwContext&, Input& input, int width, int height, const char* title);
+        Window(const Window& other) = delete;
+        Window& operator=(const Window& other) = delete;
+        ~Window();
 
         bool shouldClose() const;
         void swapBuffers() const;
         void pollEvents() const;
+        void requestClose() const;
 
     private:
         static void framebufferSizeCallback(GLFWwindow* window, int width, int height);
+        static void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
+
         GLFWwindow* _window = nullptr;
+        Input& _input;
 };
 
 #endif
